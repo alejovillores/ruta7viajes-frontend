@@ -1,0 +1,23 @@
+[
+    {
+        "ower": "Juan Villores",
+        "picture": "https://mui.com/static/images/avatar/1.jpg",
+        "from": "Junin",
+        "to": "Buenos Aires",
+        "seats": 4
+    },
+    {
+        "ower": "Alejo Perez",
+        "picture": "https://mui.com/static/images/avatar/3.jpg",
+        "from": "Buenos Aires",
+        "to": "Junin",
+        "seats": 3
+    },
+    {
+        "ower": "Natalia Lopez",
+        "picture": "https://mui.com/static/images/avatar/2.jpg",
+        "from": "Junin",
+        "to": "La Plata",
+        "seats": 2
+    }
+]

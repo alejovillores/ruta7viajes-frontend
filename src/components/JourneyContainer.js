@@ -3,7 +3,6 @@ import Journey from './Journey'
 import '../css/JourneyContainer.css'
 
 export default function JourneyContainer() {
-
     return(
         <div className='journeys-container'>
             <Journey

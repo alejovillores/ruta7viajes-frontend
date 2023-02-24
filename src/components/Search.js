@@ -6,8 +6,8 @@ export default function Search() {
 
   return (
     <div className='search-container'>
-		<h2 className='search-text'>Filtros de Viaje</h2>
 		<div className='search-box'>
+			<h2 className='search-text'>Filtros de Viaje</h2>
 			<TextField
 				id="outlined-search" 
 				label="Destino" 

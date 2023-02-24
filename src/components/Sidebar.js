@@ -1,23 +1,28 @@
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AddIcon from '@mui/icons-material/Add';
 import '../css/Sidebar.css'
 
 function Sidebar() {
     return (
         <div className="sidebar-container">
-            <button className='sidebar-route active'>
+            <a className='sidebar-route active'>
                 <HomeIcon/>
                 <p className='sidebar-route-name'>Inicio</p>
-            </button>
-            <button className='sidebar-route'>
+            </a>
+            <a className='sidebar-route'>
+                <AddIcon/>
+                <p className='sidebar-route-name'>Crear Viaje</p>
+            </a>
+            <a className='sidebar-route'>
                 <PersonIcon/>
                 <p className='sidebar-route-name'>Perfil</p>
-            </button>
-            <button className='sidebar-route logout' >
+            </a>
+            <a className='sidebar-route logout' >
                 <LogoutIcon/>
                 <p className='sidebar-route-name'>Salir</p>
-            </button>
+            </a>
         </div>
     )
 }

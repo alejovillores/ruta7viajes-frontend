@@ -4,22 +4,28 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import MapIcon from '@mui/icons-material/Map';
+import PersonIcon from '@mui/icons-material/Person';
+import '../css/Journey.css'
 
 
 export default function Journey({owner,from, to, date,seats}) {
   return (
     <Card sx={{ width: 275, height:200, margin:1 }}>
       <CardContent>
-        <Typography variant='subtitle1'>
-            {owner} viaja!
-        </Typography>
-
-        <Typography variant="body2">
-            <p>Desde <strong>{from}</strong></p>
-            <p>A <strong>{to}</strong></p>
-            <p>Fecha:  <strong>{date}</strong></p>
-            <p>Asientos disponibles <strong>{seats}</strong></p>
-        </Typography>
+        <div className='journey-card-title'>
+          <Avatar alt="Remy Sharp" src="https://mui.com/static/images/avatar/1.jpg" />
+          <Typography variant='subtitle1'>
+              {owner} viaja!
+          </Typography>
+        </div>
+        
+        <p className='journey-body'><MapIcon/> {from} - {to}</p>
+        <p className='journey-body'><CalendarMonthIcon/> {date}</p>
+        <p className='journey-body'> <PersonIcon/> {seats}</p>
+        
       </CardContent>
       <CardActions sx={{display:'flex', justifyContent:'center'}}>
         <Button variant='contained' size="small">Sumarme</Button>

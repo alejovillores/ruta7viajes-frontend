@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Search from './components/Search';
 import Sidebar from './components/Sidebar';
 import JourneyContainer from './components/JourneyContainer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div className='body-container'>
           <Search/>
           <JourneyContainer/>
+          <Footer/>
         </div>
       </div>
 
