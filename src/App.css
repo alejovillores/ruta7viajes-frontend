@@ -1,5 +1,12 @@
 
 .main-container {
     display: flex;
-    background-color: #B1D8B7;
+    background-color: rgb(27, 152, 224,0.3);
+}
+
+
+.body-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
 }

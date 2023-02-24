@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import Sidebar from './components/Sidebar';
+import JourneyContainer from './components/JourneyContainer';
 
 function App() {
   return (
@@ -9,8 +10,10 @@ function App() {
       <Header/>
       <div className='main-container'>
         <Sidebar/>
-        <Search/>
-        
+        <div className='body-container'>
+          <Search/>
+          <JourneyContainer/>
+        </div>
       </div>
 
     </div>
