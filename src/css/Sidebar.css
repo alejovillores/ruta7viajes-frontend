@@ -15,12 +15,14 @@
 .sidebar-route {
     background-color: inherit;
     border: none;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1em 0em 1em 0em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5em 0em 1em 0em;
     width: 100%;
     transition: all 0.3s linear;
     text-align: center;
+    text-decoration: none;
+    color: #272727;
 
 }
 

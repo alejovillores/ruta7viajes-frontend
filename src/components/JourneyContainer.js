@@ -3,29 +3,42 @@ import Journey from './Journey'
 import '../css/JourneyContainer.css'
 
 export default function JourneyContainer() {
+
+    const [journeys, setJourneys] = React.useState([])
+
+    React.useEffect(() => {
+        fetch(`./journeys.test.json`, {
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             }
+      
+          })
+        .then(response => {
+            response.json()
+        })
+        .then(data => {
+            setJourneys(data)
+        })
+        .catch( e => console.error(e))
+    },[journeys])
+
+    const renderJourney = () => {
+        console.log(journeys)
+        journeys.map((j) => {
+            return (<Journey
+                owner={j.owner}
+                from={j.from}
+                to={j.to}
+                date ={j.date}
+                seats={j.seats}
+            />)
+        })
+    }
+
     return(
         <div className='journeys-container'>
-            <Journey
-                owner={'Juan'}
-                from={'Junin'}
-                to={'Buenos Aires'}
-                date ={'21-02-2023'}
-                seats={4}
-            />
-            <Journey 
-                owner={'Jose'}
-                to={'Junin'}
-                from={'Buenos Aires'}
-                date ={'19-02-2023'}
-                seats={2}/> 
-            
-            <Journey 
-                owner={'Alejo'}
-                from={'Junin'}
-                to={'La Plata'}
-                date ={'1-03-2023'}
-                seats={3}/>
-
+            {renderJourney}
         </div>
     )
 }

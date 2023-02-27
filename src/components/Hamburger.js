@@ -33,6 +33,7 @@ export default function Hamburger() {
         }}
       >
         <MenuItem onClick={handleClose}>Inicio</MenuItem>
+        <MenuItem onClick={handleClose}>Crear Viaje</MenuItem>
         <MenuItem onClick={handleClose}>Perfil</MenuItem>
         <MenuItem onClick={handleClose}>Salir</MenuItem>
       </Menu>

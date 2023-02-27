@@ -1,24 +1,17 @@
 import './App.css';
-import Header from './components/Header';
-import Search from './components/Search';
-import Sidebar from './components/Sidebar';
-import JourneyContainer from './components/JourneyContainer';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Perfil from './pages/Perfil';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <div className='main-container'>
-        <Sidebar/>
-        <div className='body-container'>
-          <Search/>
-          <JourneyContainer/>
-          <Footer/>
-        </div>
-      </div>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<Home />}/>
+        <Route path="perfil" element={<Perfil />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
